@@ -30,6 +30,9 @@
                 <button id="gameModeBtn" class="bg-purple-500 hover:bg-purple-600 text-white font-medium py-3 px-6 rounded-lg transition shadow-md">
                     Mode Ludique
                 </button>
+                <button id="translateModeBtn" class="bg-green-500 hover:bg-green-600 text-white font-medium py-3 px-6 rounded-lg transition shadow-md">
+                    Mode Traduire
+                </button>
             </div>
         </div>
 
@@ -68,7 +71,8 @@
                         <input type="text" id="preterit" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white">
                     </div>
 
-                    <div>
+                    <!-- Participe passé masqué -->
+                    <div class="hidden">
                         <label for="participle" class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-1">Participe passé:</label>
                         <input type="text" id="participle" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white">
                     </div>
@@ -131,6 +135,47 @@
                     <span id="timeLeft" class="font-medium dark:text-white"></span>
                     <div id="progress" class="w-16 h-6 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
                         <div id="progressBar" class="h-full bg-blue-500 transition-all duration-1000" style="width: 100%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Translate Mode -->
+        <div id="translateMode" class="hidden">
+            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 mb-6">
+                <div class="mb-4 flex justify-between items-center">
+                    <div>
+                        <span class="text-sm font-medium text-gray-500 dark:text-gray-400">Niveau</span>
+                        <div id="translateLevel" class="text-lg font-semibold dark:text-white">1</div>
+                    </div>
+                    <div>
+                        <span class="text-sm font-medium text-gray-500 dark:text-gray-400">Score</span>
+                        <div class="text-lg font-semibold dark:text-white"><span id="translateScore">0</span> points</div>
+                    </div>
+                </div>
+
+                <div id="translateCard" class="bg-gray-100 dark:bg-gray-700 rounded-lg p-4 mb-4 text-center">
+                    <div id="translateText" class="text-xl font-bold mb-2 dark:text-white"></div>
+                    <div id="translateDirection" class="text-blue-600 dark:text-blue-400 font-semibold mb-4"></div>
+                </div>
+
+                <div id="translateOptions" class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <!-- Answer options will be inserted here -->
+                </div>
+            </div>
+
+            <div id="translateFeedback" class="bg-green-100 dark:bg-green-800 p-4 rounded-md mb-6 hidden">
+                <div id="translateFeedbackText" class="text-green-800 dark:text-green-100 font-medium"></div>
+            </div>
+
+            <div class="flex justify-between">
+                <button id="backToMenuTranslate" class="text-blue-500 hover:text-blue-600 font-medium">
+                    Retour au menu
+                </button>
+                <div class="flex space-x-2">
+                    <span id="translateTimeLeft" class="font-medium dark:text-white"></span>
+                    <div id="translateProgress" class="w-16 h-6 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                        <div id="translateProgressBar" class="h-full bg-green-500 transition-all duration-1000" style="width: 100%"></div>
                     </div>
                 </div>
             </div>

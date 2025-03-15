@@ -2,15 +2,19 @@
 const welcomeScreen = document.getElementById('welcomeScreen');
 const quizMode = document.getElementById('quizMode');
 const gameMode = document.getElementById('gameMode');
+const translateMode = document.getElementById('translateMode');
 const resultsScreen = document.getElementById('resultsScreen');
 const feedback = document.getElementById('feedback');
 const feedbackText = document.getElementById('feedbackText');
 const gameFeedback = document.getElementById('gameFeedback');
 const gameFeedbackText = document.getElementById('gameFeedbackText');
+const translateFeedback = document.getElementById('translateFeedback');
+const translateFeedbackText = document.getElementById('translateFeedbackText');
 const currentQuestionEl = document.getElementById('currentQuestion');
 const totalQuestionsEl = document.getElementById('totalQuestions');
 const scoreEl = document.getElementById('score');
 const gameScoreEl = document.getElementById('gameScore');
+const translateScoreEl = document.getElementById('translateScore');
 const finalScoreEl = document.getElementById('finalScore');
 const accuracyRateEl = document.getElementById('accuracyRate');
 const encouragementEl = document.getElementById('encouragement');
@@ -30,6 +34,11 @@ const gameTranslation = document.getElementById('gameTranslation');
 const answerOptions = document.getElementById('answerOptions');
 const timeLeft = document.getElementById('timeLeft');
 const progressBar = document.getElementById('progressBar');
+const translateText = document.getElementById('translateText');
+const translateDirection = document.getElementById('translateDirection');
+const translateOptions = document.getElementById('translateOptions');
+const translateTimeLeft = document.getElementById('translateTimeLeft');
+const translateProgressBar = document.getElementById('translateProgressBar');
 const themeToggle = document.getElementById('themeToggle');
 const sunIcon = document.getElementById('sunIcon');
 const moonIcon = document.getElementById('moonIcon');
@@ -42,10 +51,14 @@ let score = 0;
 let correctAnswers = 0;
 let currentGameLevel = 1;
 let gameScore = 0;
+let currentTranslateLevel = 1;
+let translateScore = 0;
 let timer;
 let timeRemaining = 15;
 let currentGameVerb = null;
 let currentGameOptions = [];
+let currentTranslateWord = null;
+let currentTranslateOptions = [];
 let isDarkMode = false;
 let recentlyUsedVerbs = [];
 
@@ -66,10 +79,12 @@ async function init() {
 function setupEventListeners() {
     quizModeBtn.addEventListener('click', startQuizMode);
     gameModeBtn.addEventListener('click', startGameMode);
+    translateModeBtn.addEventListener('click', startTranslateMode);
     quizForm.addEventListener('submit', checkQuizAnswer);
     nextQuestionBtn.addEventListener('click', loadNextQuizQuestion);
     backToMenuQuizBtn.addEventListener('click', goToMainMenu);
     backToMenuGameBtn.addEventListener('click', goToMainMenu);
+    backToMenuTranslateBtn.addEventListener('click', goToMainMenu);
     playAgainBtn.addEventListener('click', goToMainMenu);
     themeToggle.addEventListener('click', toggleDarkMode);
 }
@@ -116,9 +131,11 @@ function goToMainMenu() {
     welcomeScreen.classList.remove('hidden');
     quizMode.classList.add('hidden');
     gameMode.classList.add('hidden');
+    translateMode.classList.add('hidden');
     resultsScreen.classList.add('hidden');
     feedback.classList.add('hidden');
     gameFeedback.classList.add('hidden');
+    translateFeedback.classList.add('hidden');
     resetGame();
 }
 
@@ -129,9 +146,13 @@ function resetGame() {
     correctAnswers = 0;
     scoreEl.textContent = '0';
     gameScoreEl.textContent = '0';
+    translateScoreEl.textContent = '0';
     currentGameLevel = 1;
+    currentTranslateLevel = 1;
     gameScore = 0;
+    translateScore = 0;
     document.getElementById('gameLevel').textContent = '1';
+    document.getElementById('translateLevel').textContent = '1';
 }
 
 // ===== QUIZ MODE =====
@@ -189,13 +210,12 @@ function checkQuizAnswer(e) {
     
     const currentVerb = verbs.find(verb => verb.infinitive === infinitiveEl.textContent);
     const userPreterit = preteritInput.value.trim().toLowerCase();
-    const userParticiple = participleInput.value.trim().toLowerCase();
+    // Participe passé masqué - on remplit avec une valeur correcte par défaut
+    participleInput.value = currentVerb.participle;
     
     const correctPreterit = currentVerb.preterit.toLowerCase();
-    const correctParticiple = currentVerb.participle.toLowerCase();
     
     let isPreteritCorrect = false;
-    let isParticipleCorrect = false;
     
     // Check preterit
     if (correctPreterit.includes('/')) {
@@ -205,54 +225,33 @@ function checkQuizAnswer(e) {
         isPreteritCorrect = userPreterit === correctPreterit;
     }
     
-    // Check participle
-    if (correctParticiple.includes('/')) {
-        const participleOptions = correctParticiple.split('/');
-        isParticipleCorrect = participleOptions.some(option => option.trim() === userParticiple);
-    } else {
-        isParticipleCorrect = userParticiple === correctParticiple;
-    }
-    
     // Apply visual feedback to inputs
     preteritInput.classList.add(isPreteritCorrect ? 'correct' : 'incorrect');
-    participleInput.classList.add(isParticipleCorrect ? 'correct' : 'incorrect');
     
     // Update score and feedback
     let feedbackMessage = '';
     
-    if (isPreteritCorrect && isParticipleCorrect) {
+    if (isPreteritCorrect) {
         score += 10;
         correctAnswers++;
         scoreEl.textContent = score;
-        feedbackMessage = 'Parfait ! Les deux formes sont correctes.';
+        feedbackMessage = 'Parfait ! La réponse est correcte.';
         feedback.className = 'bg-green-100 dark:bg-green-800 p-4 rounded-md mb-6';
         feedbackText.className = 'text-green-800 dark:text-green-100 font-medium';
-    } else if (isPreteritCorrect || isParticipleCorrect) {
-        score += 5;
-        scoreEl.textContent = score;
-        feedbackMessage = 'Presque ! Une des formes est correcte.';
-        feedback.className = 'bg-yellow-100 dark:bg-yellow-800 p-4 rounded-md mb-6';
-        feedbackText.className = 'text-yellow-800 dark:text-yellow-100 font-medium';
+        // Show confetti for correct answers
+        createConfetti();
     } else {
-        feedbackMessage = 'Pas tout à fait. Les réponses correctes sont :';
+        feedbackMessage = 'Pas tout à fait. La réponse correcte est :';
         feedback.className = 'bg-red-100 dark:bg-red-800 p-4 rounded-md mb-6';
         feedbackText.className = 'text-red-800 dark:text-red-100 font-medium';
-    }
-    
-    // Show correct answers if any are wrong
-    if (!isPreteritCorrect || !isParticipleCorrect) {
+        // Show correct answer if wrong
         feedbackMessage += `<div class="mt-2">Prétérit: <strong>${currentVerb.preterit}</strong></div>`;
-        feedbackMessage += `<div>Participe passé: <strong>${currentVerb.participle}</strong></div>`;
     }
     
     feedbackText.innerHTML = feedbackMessage;
     feedback.classList.remove('hidden');
     nextQuestionBtn.classList.remove('hidden');
-    
-    // Show confetti for perfect answers
-    if (isPreteritCorrect && isParticipleCorrect) {
-        createConfetti();
-    }
+
     
     // If this was the last question, show results after a delay
     if (currentQuizQuestion >= totalQuestions - 1) {
@@ -299,9 +298,9 @@ function loadGameQuestion() {
     gameVerb.textContent = currentGameVerb.infinitive;
     gameTranslation.textContent = currentGameVerb.translation;
     
-    // Randomly decide if we're asking for preterit or participle
-    const askForPreterit = Math.random() > 0.5;
-    const questionType = askForPreterit ? 'prétérit' : 'participe passé';
+    // Toujours demander le prétérit (participe passé masqué)
+    const askForPreterit = true;
+    const questionType = 'prétérit';
     
     // Create answer options
     generateGameOptions(askForPreterit);
@@ -322,8 +321,11 @@ function loadGameQuestion() {
 
 // Generate game options
 function generateGameOptions(askForPreterit) {
+    // Always ask for preterit (participle passé masqué)
+    askForPreterit = true;
+    
     // Get correct answer
-    const correctAnswer = askForPreterit ? currentGameVerb.preterit : currentGameVerb.participle;
+    const correctAnswer = currentGameVerb.preterit;
     
     // Split if there are multiple correct forms
     const correctOptions = correctAnswer.includes('/') ? correctAnswer.split('/') : [correctAnswer];
@@ -334,7 +336,7 @@ function generateGameOptions(askForPreterit) {
     // Create a pool of wrong answers
     const wrongAnswers = verbs
         .filter(verb => verb !== currentGameVerb)
-        .map(verb => askForPreterit ? verb.preterit : verb.participle)
+        .map(verb => verb.preterit)
         .filter(ans => !ans.includes(mainCorrectOption)); // Make sure wrong answers don't contain the correct one
     
     // Shuffle and pick 3 wrong answers
@@ -491,7 +493,203 @@ function showGameResults() {
     encouragementEl.textContent = messages[Math.floor(Math.random() * messages.length)];
 }
 
-// ===== QUIZ RESULTS =====
+// ===== TRANSLATE MODE =====
+
+// Start translate mode
+function startTranslateMode() {
+    welcomeScreen.classList.add('hidden');
+    translateMode.classList.remove('hidden');
+    loadTranslateQuestion();
+}
+
+// Load a translate question
+function loadTranslateQuestion() {
+    clearInterval(timer);
+    translateFeedback.classList.add('hidden');
+    
+    // Reset answer options
+    translateOptions.innerHTML = '';
+    
+    // Set time depending on level
+    timeRemaining = Math.max(15 - (currentTranslateLevel - 1), 5);
+    
+    // Randomly select a verb
+    const randomIndex = Math.floor(Math.random() * verbs.length);
+    currentTranslateWord = verbs[randomIndex];
+    
+    // Randomly decide direction: français -> anglais ou anglais -> français
+    const translateToEnglish = Math.random() > 0.5;
+    
+    if (translateToEnglish) {
+        // Afficher le mot français, demander l'anglais
+        translateText.textContent = currentTranslateWord.translation;
+        translateDirection.textContent = "Traduire en anglais";
+        generateTranslateOptions(translateToEnglish);
+    } else {
+        // Afficher le mot anglais, demander le français
+        translateText.textContent = currentTranslateWord.infinitive;
+        translateDirection.textContent = "Traduire en français";
+        generateTranslateOptions(translateToEnglish);
+    }
+    
+    // Start timer
+    startTranslateTimer();
+}
+
+// Generate translate options
+function generateTranslateOptions(translateToEnglish) {
+    // Get correct answer
+    const correctAnswer = translateToEnglish ? currentTranslateWord.infinitive : currentTranslateWord.translation;
+    
+    // Create a pool of wrong answers
+    const wrongAnswers = verbs
+        .filter(verb => verb !== currentTranslateWord)
+        .map(verb => translateToEnglish ? verb.infinitive : verb.translation)
+        .filter(ans => ans !== correctAnswer); // Make sure wrong answers don't contain the correct one
+    
+    // Shuffle and pick 3 wrong answers
+    const shuffledWrong = wrongAnswers.sort(() => 0.5 - Math.random()).slice(0, 3);
+    
+    // Combine with correct answer and shuffle
+    currentTranslateOptions = [correctAnswer, ...shuffledWrong];
+    
+    // Shuffle options
+    currentTranslateOptions.sort(() => 0.5 - Math.random());
+    
+    // Create option buttons
+    currentTranslateOptions.forEach(option => {
+        const button = document.createElement('button');
+        button.className = 'option bg-white dark:bg-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 border border-gray-300 dark:border-gray-600 rounded-md p-3 text-center font-medium shadow-sm dark:text-white';
+        button.textContent = option;
+        button.addEventListener('click', () => checkTranslateAnswer(option, correctAnswer));
+        translateOptions.appendChild(button);
+    });
+}
+
+// Check translate answer
+function checkTranslateAnswer(selectedOption, correctAnswer) {
+    clearInterval(timer);
+    
+    const isCorrect = selectedOption === correctAnswer;
+    const buttons = translateOptions.querySelectorAll('.option');
+    
+    // Disable all buttons
+    buttons.forEach(btn => {
+        btn.disabled = true;
+        
+        // Mark correct/incorrect options
+        if (btn.textContent === correctAnswer) {
+            btn.classList.add('option-correct');
+        } else if (btn.textContent === selectedOption && !isCorrect) {
+            btn.classList.add('option-incorrect');
+        }
+    });
+    
+    // Update score and feedback
+    if (isCorrect) {
+        // Calculate score based on time remaining and level
+        const timeBonus = Math.round(timeRemaining * (1 + (currentTranslateLevel - 1) * 0.1));
+        const levelBonus = currentTranslateLevel * 5;
+        const points = 10 + timeBonus + levelBonus;
+        
+        translateScore += points;
+        translateScoreEl.textContent = translateScore;
+        
+        translateFeedbackText.innerHTML = `Correct ! +${points} points`;
+        translateFeedback.className = 'bg-green-100 dark:bg-green-800 p-4 rounded-md mb-6';
+        translateFeedbackText.className = 'text-green-800 dark:text-green-100 font-medium';
+        
+        // Increment level every 3 correct answers
+        if (currentTranslateLevel < 5 && Math.random() < 0.3) {
+            currentTranslateLevel++;
+            document.getElementById('translateLevel').textContent = currentTranslateLevel;
+        }
+        
+        // Show confetti
+        createConfetti();
+    } else {
+        translateFeedbackText.innerHTML = `Incorrect. La bonne réponse était : ${correctAnswer}`;
+        translateFeedback.className = 'bg-red-100 dark:bg-red-800 p-4 rounded-md mb-6';
+        translateFeedbackText.className = 'text-red-800 dark:text-red-100 font-medium';
+    }
+    
+    translateFeedback.classList.remove('hidden');
+    
+    // Load next question after delay
+    setTimeout(() => {
+        if (Math.random() < 0.1) {
+            // 10% chance to show results after each question (to keep game sessions short)
+            showTranslateResults();
+        } else {
+            loadTranslateQuestion();
+        }
+    }, 2000);
+}
+
+// Start translate timer
+function startTranslateTimer() {
+    translateTimeLeft.textContent = `${timeRemaining}s`;
+    translateProgressBar.style.width = '100%';
+    
+    timer = setInterval(() => {
+        timeRemaining--;
+        translateTimeLeft.textContent = `${timeRemaining}s`;
+        
+        // Update progress bar
+        const percentage = (timeRemaining / Math.max(15 - (currentTranslateLevel - 1), 5)) * 100;
+        translateProgressBar.style.width = `${percentage}%`;
+        
+        if (timeRemaining <= 3) {
+            translateTimeLeft.classList.add('text-red-500');
+        } else {
+            translateTimeLeft.classList.remove('text-red-500');
+        }
+        
+        if (timeRemaining <= 0) {
+            clearInterval(timer);
+            
+            // Automatically select a wrong answer
+            const correctAnswer = translateDirection.textContent.includes('anglais') ? 
+                currentTranslateWord.infinitive : currentTranslateWord.translation;
+            
+            const wrongOption = currentTranslateOptions.find(opt => opt !== correctAnswer);
+            
+            if (wrongOption) {
+                checkTranslateAnswer(wrongOption, correctAnswer);
+            } else {
+                // Just in case we can't find a wrong option
+                loadTranslateQuestion();
+            }
+        }
+    }, 1000);
+}
+
+// Show translate results
+function showTranslateResults() {
+    translateMode.classList.add('hidden');
+    resultsScreen.classList.remove('hidden');
+    finalScoreEl.textContent = translateScore;
+    
+    // Calculate star rating based on score
+    let rating = '⭐';
+    if (translateScore > 100) rating = '⭐⭐';
+    if (translateScore > 200) rating = '⭐⭐⭐';
+    if (translateScore > 300) rating = '⭐⭐⭐⭐';
+    if (translateScore > 400) rating = '⭐⭐⭐⭐⭐';
+    
+    accuracyRateEl.textContent = `Ta performance: ${rating}`;
+    
+    // Encouragement message
+    const messages = [
+        'Tu as un bon vocabulaire !',
+        'Continue à apprendre !',
+        'Excellent travail !',
+        'Tu deviens bilingue !',
+        'Impressionnant !'
+    ];
+    
+    encouragementEl.textContent = messages[Math.floor(Math.random() * messages.length)];
+}
 
 // Show quiz results
 function showResults() {

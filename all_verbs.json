@@ -1,0 +1,1610 @@
+[
+  {
+    "base form": "be",
+    "past simple": "was/were",
+    "past participle": "been",
+    "-ing form": "being",
+    "frequency": 2398724162,
+    "French": "être"
+  },
+  {
+    "base form": "have",
+    "past simple": "had",
+    "past participle": "had",
+    "-ing form": "having",
+    "frequency": 1564202750,
+    "French": "avoir"
+  },
+  {
+    "base form": "do",
+    "past simple": "did",
+    "past participle": "done",
+    "-ing form": "doing",
+    "frequency": 950751722,
+    "French": "faire"
+  },
+  {
+    "base form": "see",
+    "past simple": "saw",
+    "past participle": "seen",
+    "-ing form": "seeing",
+    "frequency": 681410380,
+    "French": "voir"
+  },
+  {
+    "base form": "get",
+    "past simple": "got",
+    "past participle": "got",
+    "-ing form": "getting",
+    "frequency": 605984508,
+    "French": "obtenir"
+  },
+  {
+    "base form": "find",
+    "past simple": "found",
+    "past participle": "found",
+    "-ing form": "finding",
+    "frequency": 502043038,
+    "French": "trouver"
+  },
+  {
+    "base form": "go",
+    "past simple": "went",
+    "past participle": "gone",
+    "-ing form": "going",
+    "frequency": 421086358,
+    "French": "aller"
+  },
+  {
+    "base form": "buy",
+    "past simple": "bought",
+    "past participle": "bought",
+    "-ing form": "buying",
+    "frequency": 410780176,
+    "French": "acheter"
+  },
+  {
+    "base form": "make",
+    "past simple": "made",
+    "past participle": "made",
+    "-ing form": "making",
+    "frequency": 405084642,
+    "French": "fabriquer"
+  },
+  {
+    "base form": "read",
+    "past simple": "read",
+    "past participle": "read",
+    "-ing form": "reading",
+    "frequency": 322331766,
+    "French": "lire"
+  },
+  {
+    "base form": "set",
+    "past simple": "set",
+    "past participle": "set",
+    "-ing form": "setting",
+    "frequency": 313469591,
+    "French": "fixer"
+  },
+  {
+    "base form": "know",
+    "past simple": "knew",
+    "past participle": "known",
+    "-ing form": "knowing",
+    "frequency": 306100813,
+    "French": "savoir"
+  },
+  {
+    "base form": "send",
+    "past simple": "sent",
+    "past participle": "sent",
+    "-ing form": "sending",
+    "frequency": 274103587,
+    "French": "envoyer"
+  },
+  {
+    "base form": "take",
+    "past simple": "took",
+    "past participle": "taken",
+    "-ing form": "taking",
+    "frequency": 264349801,
+    "French": "prendre"
+  },
+  {
+    "base form": "show",
+    "past simple": "showed",
+    "past participle": "shown",
+    "-ing form": "showing",
+    "frequency": 247541986,
+    "French": "montrer"
+  },
+  {
+    "base form": "think",
+    "past simple": "thought",
+    "past participle": "thought",
+    "-ing form": "thinking",
+    "frequency": 217856550,
+    "French": "penser"
+  },
+  {
+    "base form": "learn",
+    "past simple": "learnt",
+    "past participle": "learnt",
+    "-ing form": "learning",
+    "frequency": 179428286,
+    "French": "apprendre"
+  },
+  {
+    "base form": "cost",
+    "past simple": "cost",
+    "past participle": "cost",
+    "-ing form": "costing",
+    "frequency": 158887256,
+    "French": "coûter"
+  },
+  {
+    "base form": "say",
+    "past simple": "said",
+    "past participle": "said",
+    "-ing form": "saying",
+    "frequency": 156845267,
+    "French": "dire"
+  },
+  {
+    "base form": "come",
+    "past simple": "came",
+    "past participle": "come",
+    "-ing form": "coming",
+    "frequency": 154326119,
+    "French": "venir"
+  },
+  {
+    "base form": "let",
+    "past simple": "let",
+    "past participle": "let",
+    "-ing form": "letting",
+    "frequency": 143062438,
+    "French": "laisser"
+  },
+  {
+    "base form": "give",
+    "past simple": "gave",
+    "past participle": "given",
+    "-ing form": "giving",
+    "frequency": 140688602,
+    "French": "donner"
+  },
+  {
+    "base form": "sell",
+    "past simple": "sold",
+    "past participle": "sold",
+    "-ing form": "selling",
+    "frequency": 137696613,
+    "French": "vendre"
+  },
+  {
+    "base form": "pay",
+    "past simple": "paid",
+    "past participle": "paid",
+    "-ing form": "paying",
+    "frequency": 129198530,
+    "French": "payer"
+  },
+  {
+    "base form": "light",
+    "past simple": "lit",
+    "past participle": "lit",
+    "-ing form": "lighting",
+    "frequency": 126699632,
+    "French": "éclairer"
+  },
+  {
+    "base form": "write",
+    "past simple": "wrote",
+    "past participle": "written",
+    "-ing form": "writing",
+    "frequency": 126645151,
+    "French": "écrire"
+  },
+  {
+    "base form": "become",
+    "past simple": "became",
+    "past participle": "become",
+    "-ing form": "becoming",
+    "frequency": 120495036,
+    "French": "devenir"
+  },
+  {
+    "base form": "keep",
+    "past simple": "kept",
+    "past participle": "kept",
+    "-ing form": "keeping",
+    "frequency": 119602514,
+    "French": "garder"
+  },
+  {
+    "base form": "run",
+    "past simple": "ran",
+    "past participle": "run",
+    "-ing form": "running",
+    "frequency": 117213565,
+    "French": "courir"
+  },
+  {
+    "base form": "put",
+    "past simple": "put",
+    "past participle": "put",
+    "-ing form": "putting",
+    "frequency": 115205090,
+    "French": "mettre"
+  },
+  {
+    "base form": "tell",
+    "past simple": "told",
+    "past participle": "told",
+    "-ing form": "telling",
+    "frequency": 109553730,
+    "French": "raconter"
+  },
+  {
+    "base form": "drive",
+    "past simple": "drove",
+    "past participle": "driven",
+    "-ing form": "driving",
+    "frequency": 107799371,
+    "French": "conduire"
+  },
+  {
+    "base form": "meet",
+    "past simple": "met",
+    "past participle": "met",
+    "-ing form": "meeting",
+    "frequency": 93275872,
+    "French": "rencontrer"
+  },
+  {
+    "base form": "feel",
+    "past simple": "felt",
+    "past participle": "felt",
+    "-ing form": "feeling",
+    "frequency": 91924001,
+    "French": "sentir"
+  },
+  {
+    "base form": "choose",
+    "past simple": "chose",
+    "past participle": "chosen",
+    "-ing form": "choosing",
+    "frequency": 90010174,
+    "French": "choisir"
+  },
+  {
+    "base form": "speed",
+    "past simple": "sped",
+    "past participle": "sped",
+    "-ing form": "speeding",
+    "frequency": 83135749,
+    "French": "accélérer"
+  },
+  {
+    "base form": "mean",
+    "past simple": "meant",
+    "past participle": "meant",
+    "-ing form": "meaning",
+    "frequency": 80312172,
+    "French": "signifier"
+  },
+  {
+    "base form": "build",
+    "past simple": "built",
+    "past participle": "built",
+    "-ing form": "building",
+    "frequency": 77203075,
+    "French": "construire"
+  },
+  {
+    "base form": "leave",
+    "past simple": "left",
+    "past participle": "left",
+    "-ing form": "leaving",
+    "frequency": 70957750,
+    "French": "laisser"
+  },
+  {
+    "base form": "bid",
+    "past simple": "bade",
+    "past participle": "bidden",
+    "-ing form": "bidding",
+    "frequency": 70427114,
+    "French": "faire une offre"
+  },
+  {
+    "base form": "lead",
+    "past simple": "led",
+    "past participle": "led",
+    "-ing form": "leading",
+    "frequency": 68325439,
+    "French": "mener"
+  },
+  {
+    "base form": "wed",
+    "past simple": "wed",
+    "past participle": "wed",
+    "-ing form": "wedding",
+    "frequency": 66796198,
+    "French": "se marier"
+  },
+  {
+    "base form": "fall",
+    "past simple": "fell",
+    "past participle": "fallen",
+    "-ing form": "falling",
+    "frequency": 65501110,
+    "French": "tomber"
+  },
+  {
+    "base form": "win",
+    "past simple": "won",
+    "past participle": "won",
+    "-ing form": "winning",
+    "frequency": 65264239,
+    "French": "gagner"
+  },
+  {
+    "base form": "spring",
+    "past simple": "sprang",
+    "past participle": "sprung",
+    "-ing form": "springing",
+    "frequency": 64814116,
+    "French": "surgir"
+  },
+  {
+    "base form": "deal",
+    "past simple": "dealt",
+    "past participle": "dealt",
+    "-ing form": "dealing",
+    "frequency": 63828244,
+    "French": "négocier"
+  },
+  {
+    "base form": "hold",
+    "past simple": "held",
+    "past participle": "held",
+    "-ing form": "holding",
+    "frequency": 63777575,
+    "French": "tenir"
+  },
+  {
+    "base form": "feed",
+    "past simple": "fed",
+    "past participle": "fed",
+    "-ing form": "feeding",
+    "frequency": 62663785,
+    "French": "nourrir"
+  },
+  {
+    "base form": "understand",
+    "past simple": "understood",
+    "past participle": "understood",
+    "-ing form": "understanding",
+    "frequency": 61719969,
+    "French": "comprendre"
+  },
+  {
+    "base form": "cut",
+    "past simple": "cut",
+    "past participle": "cut",
+    "-ing form": "cutting",
+    "frequency": 61337417,
+    "French": "couper"
+  },
+  {
+    "base form": "bring",
+    "past simple": "brought",
+    "past participle": "brought",
+    "-ing form": "bringing",
+    "frequency": 57608074,
+    "French": "apporter"
+  },
+  {
+    "base form": "ring",
+    "past simple": "rang",
+    "past participle": "rung",
+    "-ing form": "ringing",
+    "frequency": 54342432,
+    "French": "sonner"
+  },
+  {
+    "base form": "hit",
+    "past simple": "hit",
+    "past participle": "hit",
+    "-ing form": "hitting",
+    "frequency": 53171478,
+    "French": "frapper"
+  },
+  {
+    "base form": "string",
+    "past simple": "strung",
+    "past participle": "strung",
+    "-ing form": "stringing",
+    "frequency": 52681344,
+    "French": "mettre des cordes"
+  },
+  {
+    "base form": "break",
+    "past simple": "broke",
+    "past participle": "broken",
+    "-ing form": "breaking",
+    "frequency": 51242970,
+    "French": "casser"
+  },
+  {
+    "base form": "saw",
+    "past simple": "sawed",
+    "past participle": "sawn",
+    "-ing form": "sawing",
+    "frequency": 48544776,
+    "French": "scier"
+  },
+  {
+    "base form": "hear",
+    "past simple": "heard",
+    "past participle": "heard",
+    "-ing form": "hearing",
+    "frequency": 47426506,
+    "French": "entendre"
+  },
+  {
+    "base form": "stand",
+    "past simple": "stood",
+    "past participle": "stood",
+    "-ing form": "standing",
+    "frequency": 46292709,
+    "French": "se tenir debout"
+  },
+  {
+    "base form": "begin",
+    "past simple": "began",
+    "past participle": "begun",
+    "-ing form": "beginning",
+    "frequency": 45434902,
+    "French": "commencer"
+  },
+  {
+    "base form": "wind",
+    "past simple": "wound",
+    "past participle": "wound",
+    "-ing form": "winding",
+    "frequency": 42974876,
+    "French": "enrouler"
+  },
+  {
+    "base form": "fit",
+    "past simple": "fit",
+    "past participle": "fit",
+    "-ing form": "fitting",
+    "frequency": 42342802,
+    "French": "s'adapter"
+  },
+  {
+    "base form": "dream",
+    "past simple": "dreamt",
+    "past participle": "dreamt",
+    "-ing form": "dreaming",
+    "frequency": 33518573,
+    "French": "rêver"
+  },
+  {
+    "base form": "cast",
+    "past simple": "cast",
+    "past participle": "cast",
+    "-ing form": "casting",
+    "frequency": 33395024,
+    "French": "jeter"
+  },
+  {
+    "base form": "bear",
+    "past simple": "bore",
+    "past participle": "borne",
+    "-ing form": "bearing",
+    "frequency": 31981362,
+    "French": "supporter"
+  },
+  {
+    "base form": "blow",
+    "past simple": "blew",
+    "past participle": "blown",
+    "-ing form": "blowing",
+    "frequency": 31344495,
+    "French": "souffler"
+  },
+  {
+    "base form": "speak",
+    "past simple": "spoke",
+    "past participle": "spoken",
+    "-ing form": "speaking",
+    "frequency": 31324712,
+    "French": "parler"
+  },
+  {
+    "base form": "fight",
+    "past simple": "fought",
+    "past participle": "fought",
+    "-ing form": "fighting",
+    "frequency": 30784313,
+    "French": "combattre"
+  },
+  {
+    "base form": "wear",
+    "past simple": "wore",
+    "past participle": "worn",
+    "-ing form": "wearing",
+    "frequency": 29846762,
+    "French": "porter"
+  },
+  {
+    "base form": "rise",
+    "past simple": "rose",
+    "past participle": "risen",
+    "-ing form": "rising",
+    "frequency": 29535295,
+    "French": "s'élever"
+  },
+  {
+    "base form": "sleep",
+    "past simple": "slept",
+    "past participle": "slept",
+    "-ing form": "sleeping",
+    "frequency": 29491537,
+    "French": "dormir"
+  },
+  {
+    "base form": "drink",
+    "past simple": "drank",
+    "past participle": "drunk",
+    "-ing form": "drinking",
+    "frequency": 29254937,
+    "French": "boire"
+  },
+  {
+    "base form": "eat",
+    "past simple": "ate",
+    "past participle": "eaten",
+    "-ing form": "eating",
+    "frequency": 29237400,
+    "French": "manger"
+  },
+  {
+    "base form": "fly",
+    "past simple": "flew",
+    "past participle": "flown",
+    "-ing form": "flying",
+    "frequency": 28279478,
+    "French": "voler"
+  },
+  {
+    "base form": "beat",
+    "past simple": "beat",
+    "past participle": "beaten",
+    "-ing form": "beating",
+    "frequency": 27616668,
+    "French": "battre"
+  },
+  {
+    "base form": "hide",
+    "past simple": "hid",
+    "past participle": "hidden",
+    "-ing form": "hiding",
+    "frequency": 27157035,
+    "French": "cacher"
+  },
+  {
+    "base form": "spend",
+    "past simple": "spent",
+    "past participle": "spent",
+    "-ing form": "spending",
+    "frequency": 26713310,
+    "French": "dépenser"
+  },
+  {
+    "base form": "grow",
+    "past simple": "grew",
+    "past participle": "grown",
+    "-ing form": "growing",
+    "frequency": 26701492,
+    "French": "grandir"
+  },
+  {
+    "base form": "ride",
+    "past simple": "rode",
+    "past participle": "ridden",
+    "-ing form": "riding",
+    "frequency": 26153004,
+    "French": "chevaucher"
+  },
+  {
+    "base form": "forget",
+    "past simple": "forgot",
+    "past participle": "forgotten",
+    "-ing form": "forgetting",
+    "frequency": 25162411,
+    "French": "oublier"
+  },
+  {
+    "base form": "spread",
+    "past simple": "spread",
+    "past participle": "spread",
+    "-ing form": "spreading",
+    "frequency": 24520573,
+    "French": "se propager"
+  },
+  {
+    "base form": "lose",
+    "past simple": "lost",
+    "past participle": "lost",
+    "-ing form": "losing",
+    "frequency": 24136984,
+    "French": "perdre"
+  },
+  {
+    "base form": "seek",
+    "past simple": "sought",
+    "past participle": "sought",
+    "-ing form": "seeking",
+    "frequency": 24135344,
+    "French": "rechercher"
+  },
+  {
+    "base form": "wet",
+    "past simple": "wet",
+    "past participle": "wet",
+    "-ing form": "wetting",
+    "frequency": 23918294,
+    "French": "mouiller"
+  },
+  {
+    "base form": "draw",
+    "past simple": "drew",
+    "past participle": "drawn",
+    "-ing form": "drawing",
+    "frequency": 22705371,
+    "French": "dessiner"
+  },
+  {
+    "base form": "stick",
+    "past simple": "stick",
+    "past participle": "stuck",
+    "-ing form": "sticking",
+    "frequency": 22399126,
+    "French": "coller"
+  },
+  {
+    "base form": "slide",
+    "past simple": "slid",
+    "past participle": "slid",
+    "-ing form": "sliding",
+    "frequency": 22339084,
+    "French": "glisser"
+  },
+  {
+    "base form": "catch",
+    "past simple": "caught",
+    "past participle": "caught",
+    "-ing form": "catching",
+    "frequency": 20400979,
+    "French": "attraper"
+  },
+  {
+    "base form": "split",
+    "past simple": "split",
+    "past participle": "split",
+    "-ing form": "splitting",
+    "frequency": 19998411,
+    "French": "séparer"
+  },
+  {
+    "base form": "sit",
+    "past simple": "sat",
+    "past participle": "sat",
+    "-ing form": "sitting",
+    "frequency": 19797379,
+    "French": "s'asseoir"
+  },
+  {
+    "base form": "teach",
+    "past simple": "taught",
+    "past participle": "taught",
+    "-ing form": "teaching",
+    "frequency": 19079783,
+    "French": "enseigner"
+  },
+  {
+    "base form": "strip",
+    "past simple": "stripped",
+    "past participle": "stripped",
+    "-ing form": "stripping",
+    "frequency": 18711440,
+    "French": "déshabiller"
+  },
+  {
+    "base form": "strike",
+    "past simple": "struck",
+    "past participle": "struck",
+    "-ing form": "striking",
+    "frequency": 18621050,
+    "French": "frapper"
+  },
+  {
+    "base form": "shoe",
+    "past simple": "shod",
+    "past participle": "shod",
+    "-ing form": "shoeing",
+    "frequency": 16342426,
+    "French": "chausser"
+  },
+  {
+    "base form": "lay",
+    "past simple": "laid",
+    "past participle": "laid",
+    "-ing form": "laying",
+    "frequency": 16122690,
+    "French": "poser"
+  },
+  {
+    "base form": "prove",
+    "past simple": "proved",
+    "past participle": "proven",
+    "-ing form": "proving",
+    "frequency": 16046788,
+    "French": "prouver"
+  },
+  {
+    "base form": "bet",
+    "past simple": "bet",
+    "past participle": "bet",
+    "-ing form": "betting",
+    "frequency": 15943118,
+    "French": "parier"
+  },
+  {
+    "base form": "throw",
+    "past simple": "threw",
+    "past participle": "thrown",
+    "-ing form": "throwing",
+    "frequency": 15751985,
+    "French": "lancer"
+  },
+  {
+    "base form": "wake",
+    "past simple": "woke",
+    "past participle": "woken",
+    "-ing form": "waking",
+    "frequency": 14120141,
+    "French": "se réveiller"
+  },
+  {
+    "base form": "burn",
+    "past simple": "burnt",
+    "past participle": "burnt",
+    "-ing form": "burning",
+    "frequency": 13602754,
+    "French": "brûler"
+  },
+  {
+    "base form": "lie",
+    "past simple": "lay",
+    "past participle": "lain",
+    "-ing form": "lying",
+    "frequency": 13533542,
+    "French": "s'allonger"
+  },
+  {
+    "base form": "lie",
+    "past simple": "lied",
+    "past participle": "lied",
+    "-ing form": "lying",
+    "frequency": 13533542,
+    "French": "mentir"
+  },
+  {
+    "base form": "hurt",
+    "past simple": "hurt",
+    "past participle": "hurt",
+    "-ing form": "hurting",
+    "frequency": 12936269,
+    "French": "blesser"
+  },
+  {
+    "base form": "swing",
+    "past simple": "swung",
+    "past participle": "swung",
+    "-ing form": "swinging",
+    "frequency": 12734467,
+    "French": "se balancer"
+  },
+  {
+    "base form": "shoot",
+    "past simple": "shot",
+    "past participle": "shot",
+    "-ing form": "shooting",
+    "frequency": 12695618,
+    "French": "tirer"
+  },
+  {
+    "base form": "spin",
+    "past simple": "span",
+    "past participle": "spun",
+    "-ing form": "spinning",
+    "frequency": 12671696,
+    "French": "tourner"
+  },
+  {
+    "base form": "shut",
+    "past simple": "shut",
+    "past participle": "shut",
+    "-ing form": "shutting",
+    "frequency": 11689186,
+    "French": "fermer / éteindre"
+  },
+  {
+    "base form": "sing",
+    "past simple": "sang",
+    "past participle": "sung",
+    "-ing form": "singing",
+    "frequency": 11114001,
+    "French": "chanter"
+  },
+  {
+    "base form": "hang",
+    "past simple": "hung",
+    "past participle": "hung",
+    "-ing form": "hanging",
+    "frequency": 11077672,
+    "French": "pendre"
+  },
+  {
+    "base form": "mistake",
+    "past simple": "mistook",
+    "past participle": "mistaken",
+    "-ing form": "mistaking",
+    "frequency": 10841486,
+    "French": "se méprendre"
+  },
+  {
+    "base form": "quit",
+    "past simple": "quit",
+    "past participle": "quit",
+    "-ing form": "quitting",
+    "frequency": 10324803,
+    "French": "arrêter"
+  },
+  {
+    "base form": "bend",
+    "past simple": "bent",
+    "past participle": "bent",
+    "-ing form": "bending",
+    "frequency": 9342191,
+    "French": "plier"
+  },
+  {
+    "base form": "swim",
+    "past simple": "swam",
+    "past participle": "swum",
+    "-ing form": "swimming",
+    "frequency": 8739102,
+    "French": "nager"
+  },
+  {
+    "base form": "spell",
+    "past simple": "spelt",
+    "past participle": "spelt",
+    "-ing form": "spelling",
+    "frequency": 8506049,
+    "French": "épeler"
+  },
+  {
+    "base form": "arise",
+    "past simple": "arose",
+    "past participle": "arisen",
+    "-ing form": "arising",
+    "frequency": 8337093,
+    "French": "survenir"
+  },
+  {
+    "base form": "dive",
+    "past simple": "dived",
+    "past participle": "dived",
+    "-ing form": "diving",
+    "frequency": 8254655,
+    "French": "plonger"
+  },
+  {
+    "base form": "sink",
+    "past simple": "sank",
+    "past participle": "sunk",
+    "-ing form": "sinking",
+    "frequency": 8120590,
+    "French": "couler"
+  },
+  {
+    "base form": "rid",
+    "past simple": "rid",
+    "past participle": "rid",
+    "-ing form": "ridding",
+    "frequency": 7877480,
+    "French": "débarrasser"
+  },
+  {
+    "base form": "breed",
+    "past simple": "bred",
+    "past participle": "bred",
+    "-ing form": "breeding",
+    "frequency": 7716901,
+    "French": "se reproduire"
+  },
+  {
+    "base form": "dig",
+    "past simple": "dug",
+    "past participle": "dug",
+    "-ing form": "digging",
+    "frequency": 7292787,
+    "French": "creuser"
+  },
+  {
+    "base form": "shake",
+    "past simple": "shook",
+    "past participle": "shaken",
+    "-ing form": "shaking",
+    "frequency": 6839319,
+    "French": "secouer"
+  },
+  {
+    "base form": "shed",
+    "past simple": "shed",
+    "past participle": "shed",
+    "-ing form": "shedding",
+    "frequency": 6720397,
+    "French": "verser"
+  },
+  {
+    "base form": "bind",
+    "past simple": "bind",
+    "past participle": "bound",
+    "-ing form": "binding",
+    "frequency": 6677053,
+    "French": "lier"
+  },
+  {
+    "base form": "smell",
+    "past simple": "smelt",
+    "past participle": "smelt",
+    "-ing form": "smelling",
+    "frequency": 6642666,
+    "French": "sentir (une odeur)"
+  },
+  {
+    "base form": "lean",
+    "past simple": "leant",
+    "past participle": "leant",
+    "-ing form": "leaning",
+    "frequency": 6431362,
+    "French": "pencher"
+  },
+  {
+    "base form": "steal",
+    "past simple": "stole",
+    "past participle": "stolen",
+    "-ing form": "stealing",
+    "frequency": 6257493,
+    "French": "dérober"
+  },
+  {
+    "base form": "bite",
+    "past simple": "bit",
+    "past participle": "bitten",
+    "-ing form": "biting",
+    "frequency": 6058201,
+    "French": "mordre"
+  },
+  {
+    "base form": "shine",
+    "past simple": "shone",
+    "past participle": "shone",
+    "-ing form": "shining",
+    "frequency": 5881862,
+    "French": "briller"
+  },
+  {
+    "base form": "zinc",
+    "past simple": "zincked",
+    "past participle": "zincked",
+    "-ing form": "zincking",
+    "frequency": 5671140,
+    "French": "zinguer"
+  },
+  {
+    "base form": "undertake",
+    "past simple": "undertook",
+    "past participle": "undertaken",
+    "-ing form": "undertaking",
+    "frequency": 5613443,
+    "French": "entreprendre"
+  },
+  {
+    "base form": "tear",
+    "past simple": "tore",
+    "past participle": "torn",
+    "-ing form": "tearing",
+    "frequency": 5605530,
+    "French": "pleurer"
+  },
+  {
+    "base form": "upset",
+    "past simple": "upset",
+    "past participle": "upset",
+    "-ing form": "upsetting",
+    "frequency": 5544484,
+    "French": "bouleverser"
+  },
+  {
+    "base form": "freeze",
+    "past simple": "froze",
+    "past participle": "frozen",
+    "-ing form": "freezing",
+    "frequency": 5526731,
+    "French": "geler"
+  },
+  {
+    "base form": "burst",
+    "past simple": "burst",
+    "past participle": "burst",
+    "-ing form": "bursting",
+    "frequency": 5147573,
+    "French": "éclater"
+  },
+  {
+    "base form": "knit",
+    "past simple": "knit",
+    "past participle": "knit",
+    "-ing form": "knitting",
+    "frequency": 5113070,
+    "French": "tricoter"
+  },
+  {
+    "base form": "leap",
+    "past simple": "leapt",
+    "past participle": "leapt",
+    "-ing form": "leaping",
+    "frequency": 4767538,
+    "French": "bondir"
+  },
+  {
+    "base form": "withdraw",
+    "past simple": "withdrew",
+    "past participle": "withdrawn",
+    "-ing form": "withdrawing",
+    "frequency": 4652948,
+    "French": "se rétracter"
+  },
+  {
+    "base form": "sweat",
+    "past simple": "sweat",
+    "past participle": "sweat",
+    "-ing form": "sweating",
+    "frequency": 4551615,
+    "French": "suer"
+  },
+  {
+    "base form": "bust",
+    "past simple": "bust",
+    "past participle": "bust",
+    "-ing form": "busting",
+    "frequency": 4547742,
+    "French": "bousiller"
+  },
+  {
+    "base form": "strive",
+    "past simple": "strove",
+    "past participle": "striven",
+    "-ing form": "striving",
+    "frequency": 4152261,
+    "French": "s'efforcer"
+  },
+  {
+    "base form": "spill",
+    "past simple": "spilt",
+    "past participle": "spilt",
+    "-ing form": "spilling",
+    "frequency": 3890646,
+    "French": "renverser"
+  },
+  {
+    "base form": "abide",
+    "past simple": "abided",
+    "past participle": "abided",
+    "-ing form": "abiding",
+    "frequency": 3722809,
+    "French": "demeurer"
+  },
+  {
+    "base form": "sweep",
+    "past simple": "swept",
+    "past participle": "swept",
+    "-ing form": "sweeping",
+    "frequency": 3623863,
+    "French": "balayer"
+  },
+  {
+    "base form": "thrust",
+    "past simple": "thrust",
+    "past participle": "thrust",
+    "-ing form": "thrusting",
+    "frequency": 3500671,
+    "French": "pousser"
+  },
+  {
+    "base form": "forgive",
+    "past simple": "forgave",
+    "past participle": "forgiven",
+    "-ing form": "forgiving",
+    "frequency": 3379266,
+    "French": "pardonner"
+  },
+  {
+    "base form": "shrink",
+    "past simple": "shrank",
+    "past participle": "shrunk",
+    "-ing form": "shrinking",
+    "frequency": 3261118,
+    "French": "rétrécir"
+  },
+  {
+    "base form": "awake",
+    "past simple": "awoke",
+    "past participle": "awoken",
+    "-ing form": "awaking",
+    "frequency": 3230337,
+    "French": "se réveiller"
+  },
+  {
+    "base form": "melt",
+    "past simple": "melted",
+    "past participle": "molten",
+    "-ing form": "melting",
+    "frequency": 3153948,
+    "French": "fondre"
+  },
+  {
+    "base form": "swear",
+    "past simple": "swore",
+    "past participle": "sworn",
+    "-ing form": "swearing",
+    "frequency": 3082372,
+    "French": "jurer"
+  },
+  {
+    "base form": "lend",
+    "past simple": "lent",
+    "past participle": "lent",
+    "-ing form": "lending",
+    "frequency": 2926360,
+    "French": "prêter"
+  },
+  {
+    "base form": "shear",
+    "past simple": "shore",
+    "past participle": "shorn",
+    "-ing form": "shearing",
+    "frequency": 2886210,
+    "French": "tondre"
+  },
+  {
+    "base form": "behold",
+    "past simple": "beheld",
+    "past participle": "beheld",
+    "-ing form": "beholding",
+    "frequency": 2847118,
+    "French": "contempler"
+  },
+  {
+    "base form": "sting",
+    "past simple": "stung",
+    "past participle": "stung",
+    "-ing form": "stinging",
+    "frequency": 2773263,
+    "French": "piquer"
+  },
+  {
+    "base form": "undergo",
+    "past simple": "underwent",
+    "past participle": "undergone",
+    "-ing form": "undergoing",
+    "frequency": 2620082,
+    "French": "subir"
+  },
+  {
+    "base form": "shave",
+    "past simple": "shaved",
+    "past participle": "shaven",
+    "-ing form": "shaving",
+    "frequency": 2580057,
+    "French": "se raser"
+  },
+  {
+    "base form": "grind",
+    "past simple": "ground",
+    "past participle": "ground",
+    "-ing form": "grinding",
+    "frequency": 2482307,
+    "French": "broyer"
+  },
+  {
+    "base form": "sneak",
+    "past simple": "snuck",
+    "past participle": "snuck",
+    "-ing form": "sneaking",
+    "frequency": 2280877,
+    "French": "se faufiler"
+  },
+  {
+    "base form": "swell",
+    "past simple": "swelled",
+    "past participle": "swollen",
+    "-ing form": "swelling",
+    "frequency": 2213445,
+    "French": "gonfler"
+  },
+  {
+    "base form": "spit",
+    "past simple": "spat",
+    "past participle": "spat",
+    "-ing form": "spitting",
+    "frequency": 2069895,
+    "French": "cracher"
+  },
+  {
+    "base form": "dwell",
+    "past simple": "dwelt",
+    "past participle": "dwelt",
+    "-ing form": "dwelling",
+    "frequency": 2014411,
+    "French": "habiter"
+  },
+  {
+    "base form": "bleed",
+    "past simple": "bled",
+    "past participle": "bled",
+    "-ing form": "bleeding",
+    "frequency": 1989071,
+    "French": "saigner"
+  },
+  {
+    "base form": "weave",
+    "past simple": "wove",
+    "past participle": "woven",
+    "-ing form": "weaving",
+    "frequency": 1965230,
+    "French": "tisser"
+  },
+  {
+    "base form": "thrive",
+    "past simple": "throve",
+    "past participle": "thriven",
+    "-ing form": "thriving",
+    "frequency": 1822797,
+    "French": "prospérer"
+  },
+  {
+    "base form": "creep",
+    "past simple": "crept",
+    "past participle": "crept",
+    "-ing form": "creeping",
+    "frequency": 1811981,
+    "French": "ramper"
+  },
+  {
+    "base form": "sew",
+    "past simple": "sewed",
+    "past participle": "sewn",
+    "-ing form": "sewing",
+    "frequency": 1756454,
+    "French": "coudre"
+  },
+  {
+    "base form": "withstand",
+    "past simple": "withstood",
+    "past participle": "withstood",
+    "-ing form": "withstanding",
+    "frequency": 1730101,
+    "French": "résister à"
+  },
+  {
+    "base form": "flee",
+    "past simple": "fled",
+    "past participle": "fled",
+    "-ing form": "fleeing",
+    "frequency": 1724638,
+    "French": "fuire"
+  },
+  {
+    "base form": "sling",
+    "past simple": "slung",
+    "past participle": "slung",
+    "-ing form": "slinging",
+    "frequency": 1688770,
+    "French": "lancer"
+  },
+  {
+    "base form": "tread",
+    "past simple": "trod",
+    "past participle": "trodden",
+    "-ing form": "treading",
+    "frequency": 1672572,
+    "French": "marcher / fouler"
+  },
+  {
+    "base form": "preset",
+    "past simple": "preset",
+    "past participle": "preset",
+    "-ing form": "presetting",
+    "frequency": 1656205,
+    "French": "prérégler"
+  },
+  {
+    "base form": "stride",
+    "past simple": "strode",
+    "past participle": "stridden",
+    "-ing form": "striding",
+    "frequency": 1546387,
+    "French": "marcher à grand pas"
+  },
+  {
+    "base form": "slit",
+    "past simple": "slit",
+    "past participle": "slit",
+    "-ing form": "slitting",
+    "frequency": 1424036,
+    "French": "fendre"
+  },
+  {
+    "base form": "spoil",
+    "past simple": "spoilt",
+    "past participle": "spoilt",
+    "-ing form": "spoiling",
+    "frequency": 1419320,
+    "French": "gâcher"
+  },
+  {
+    "base form": "sow",
+    "past simple": "sowed",
+    "past participle": "sown",
+    "-ing form": "sowing",
+    "frequency": 1282086,
+    "French": "semer"
+  },
+  {
+    "base form": "withhold",
+    "past simple": "withheld",
+    "past participle": "withheld",
+    "-ing form": "withholding",
+    "frequency": 1201289,
+    "French": "refuser"
+  },
+  {
+    "base form": "forbid",
+    "past simple": "forbade",
+    "past participle": "forbidden",
+    "-ing form": "forbidding",
+    "frequency": 1184790,
+    "French": "interdire"
+  },
+  {
+    "base form": "weep",
+    "past simple": "wept",
+    "past participle": "wept",
+    "-ing form": "weeping",
+    "frequency": 1038608,
+    "French": "pleurer"
+  },
+  {
+    "base form": "inlay",
+    "past simple": "inlaid",
+    "past participle": "inlaid",
+    "-ing form": "inlaying",
+    "frequency": 965778,
+    "French": "incuster"
+  },
+  {
+    "base form": "cling",
+    "past simple": "clung",
+    "past participle": "clung",
+    "-ing form": "clinging",
+    "frequency": 946281,
+    "French": "s'accrocher"
+  },
+  {
+    "base form": "stink",
+    "past simple": "stank",
+    "past participle": "stunk",
+    "-ing form": "stinking",
+    "frequency": 872742,
+    "French": "puer"
+  },
+  {
+    "base form": "slay",
+    "past simple": "slew",
+    "past participle": "slain",
+    "-ing form": "slaying",
+    "frequency": 702325,
+    "French": "tuer"
+  },
+  {
+    "base form": "fling",
+    "past simple": "flung",
+    "past participle": "flung",
+    "-ing form": "flinging",
+    "frequency": 682999,
+    "French": "lancer"
+  },
+  {
+    "base form": "mislead",
+    "past simple": "misled",
+    "past participle": "tomisled",
+    "-ing form": "misleading",
+    "frequency": 643671,
+    "French": "induire en erreur"
+  },
+  {
+    "base form": "foresee",
+    "past simple": "foresaw",
+    "past participle": "foreseen",
+    "-ing form": "foreseeing",
+    "frequency": 615358,
+    "French": "prévoir"
+  },
+  {
+    "base form": "mow",
+    "past simple": "mowed",
+    "past participle": "mown",
+    "-ing form": "mowing",
+    "frequency": 517690,
+    "French": "tondre"
+  },
+  {
+    "base form": "overtake",
+    "past simple": "overtook",
+    "past participle": "overtaken",
+    "-ing form": "overtaking",
+    "frequency": 498189,
+    "French": "dépasser"
+  },
+  {
+    "base form": "sunburn",
+    "past simple": "sunburnt",
+    "past participle": "sunburnt",
+    "-ing form": "sunburning",
+    "frequency": 474135,
+    "French": "prendre un coup de soleil"
+  },
+  {
+    "base form": "sublet",
+    "past simple": "sublet",
+    "past participle": "sublet",
+    "-ing form": "subletting",
+    "frequency": 436128,
+    "French": "sous-louer"
+  },
+  {
+    "base form": "kneel",
+    "past simple": "knelt",
+    "past participle": "knelt",
+    "-ing form": "kneeling",
+    "frequency": 417602,
+    "French": "s'agenouiller"
+  },
+  {
+    "base form": "rive",
+    "past simple": "rived",
+    "past participle": "riven",
+    "-ing form": "riving",
+    "frequency": 386682,
+    "French": "déchirer"
+  },
+  {
+    "base form": "forsake",
+    "past simple": "forsook",
+    "past participle": "forsaken",
+    "-ing form": "forsaking",
+    "frequency": 359114,
+    "French": "abandonner"
+  },
+  {
+    "base form": "misunderstand",
+    "past simple": "misunderstood",
+    "past participle": "misunderstood",
+    "-ing form": "misunderstanding",
+    "frequency": 313613,
+    "French": "mal comprendre"
+  },
+  {
+    "base form": "clothe",
+    "past simple": "clad",
+    "past participle": "clad",
+    "-ing form": "clothing",
+    "frequency": 308351,
+    "French": "habiller, vêtir"
+  },
+  {
+    "base form": "vex",
+    "past simple": "vexed",
+    "past participle": "vexed",
+    "-ing form": "vexing",
+    "frequency": 287473,
+    "French": "contrarier"
+  },
+  {
+    "base form": "frostbite",
+    "past simple": "frostbit",
+    "past participle": "frostbitten",
+    "-ing form": "frostbiting",
+    "frequency": 277548,
+    "French": "avois des engelures"
+  },
+  {
+    "base form": "alight",
+    "past simple": "alit",
+    "past participle": "alighted",
+    "-ing form": "alighting",
+    "frequency": 261720,
+    "French": "descendre"
+  },
+  {
+    "base form": "slink",
+    "past simple": "slunk",
+    "past participle": "slunk",
+    "-ing form": "slinking",
+    "frequency": 196197,
+    "French": "se faufiler"
+  },
+  {
+    "base form": "wring",
+    "past simple": "wrung",
+    "past participle": "wrung",
+    "-ing form": "wringing",
+    "frequency": 188579,
+    "French": "tordre"
+  },
+  {
+    "base form": "wend",
+    "past simple": "went",
+    "past participle": "went",
+    "-ing form": "wending",
+    "frequency": 120037,
+    "French": "se rendre"
+  },
+  {
+    "base form": "overhear",
+    "past simple": "overheard",
+    "past participle": "overheard",
+    "-ing form": "overhearing",
+    "frequency": 97704,
+    "French": "surprendre"
+  },
+  {
+    "base form": "overdraw",
+    "past simple": "overdrew",
+    "past participle": "overdrawn",
+    "-ing form": "overdrawing",
+    "frequency": 23187,
+    "French": "mettre à découvert"
+  },
+  {
+    "base form": "handwrite",
+    "past simple": "handwrote",
+    "past participle": "handwritten",
+    "-ing form": "handwriting",
+    "frequency": 21641,
+    "French": "écrire à la main"
+  }
+]
