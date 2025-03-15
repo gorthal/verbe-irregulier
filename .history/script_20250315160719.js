@@ -72,14 +72,14 @@ async function init() {
         checkDarkModePreference();
     } catch (error) {
         console.error('Error loading verbs:', error);
-        //alert('Erreur lors du chargement des verbes. Veuillez rafraîchir la page.');
+        alert('Erreur lors du chargement des verbes. Veuillez rafraîchir la page.');
     }
 }
 
 // Générer des variations du prétérit pour le mode normal
 function generatePretermVariations(preterit) {
     const variations = [];
-
+    
     // Fonction pour modifier aléatoirement une lettre dans une chaîne
     function changeRandomLetter(word) {
         const chars = 'abcdefghijklmnopqrstuvwxyz';
@@ -92,7 +92,7 @@ function generatePretermVariations(preterit) {
         letters[pos] = newChar;
         return letters.join('');
     }
-
+    
     // Fonction pour intervertir deux lettres adjacentes
     function swapAdjacentLetters(word) {
         if (word.length < 3) return word;
@@ -103,12 +103,12 @@ function generatePretermVariations(preterit) {
         [letters[pos], letters[pos + 1]] = [letters[pos + 1], letters[pos]];
         return letters.join('');
     }
-
+    
     // Fonction pour ajouter ou supprimer une lettre
     function addOrRemoveLetter(word) {
         const letters = word.split('');
         const add = Math.random() > 0.5 && word.length < 8; // Seulement ajouter si le mot n'est pas déjà trop long
-
+        
         if (add) {
             // Ajouter une lettre aléatoire
             const chars = 'aeiou'; // Utiliser des voyelles pour que ça reste prononcçable
@@ -120,44 +120,44 @@ function generatePretermVariations(preterit) {
             const pos = Math.floor(Math.random() * (letters.length - 1)) + 1;
             letters.splice(pos, 1);
         }
-
+        
         return letters.join('');
     }
-
+    
     // Si le prétérit contient un "/", utiliser chaque forme comme base d'une variation
     let baseWords = preterit.includes('/') ? preterit.split('/') : [preterit];
-
+    
     // Pour chaque base, générer une variation
     for (const baseWord of baseWords) {
         // Nettoyer le mot de base
         const word = baseWord.trim();
-
+        
         // Appliquer chaque technique de variation
         variations.push(changeRandomLetter(word));
-
+        
         // Si on n'a pas encore assez de variations, ajouter d'autres
         if (variations.length < 3) {
             variations.push(swapAdjacentLetters(word));
         }
-
+        
         if (variations.length < 3) {
             variations.push(addOrRemoveLetter(word));
         }
     }
-
+    
     // S'assurer qu'on a exactement 3 variations différentes
     const uniqueVariations = [...new Set(variations)];
-
+    
     // Si on a trop de variations, n'en garder que 3
     if (uniqueVariations.length > 3) {
         return uniqueVariations.slice(0, 3);
     }
-
+    
     // Si on n'a pas assez de variations, en ajouter d'autres en réappliquant les techniques
     while (uniqueVariations.length < 3) {
         const baseWord = baseWords[0].trim();
         let newVariation;
-
+        
         // Essayer différentes techniques jusqu'à obtenir une variation unique
         do {
             const technique = Math.floor(Math.random() * 3);
@@ -169,10 +169,10 @@ function generatePretermVariations(preterit) {
                 newVariation = addOrRemoveLetter(baseWord);
             }
         } while (uniqueVariations.includes(newVariation));
-
+        
         uniqueVariations.push(newVariation);
     }
-
+    
     return uniqueVariations;
 }
 // Set up event listeners
@@ -184,17 +184,17 @@ function setupEventListeners() {
     nextQuestionBtn.addEventListener('click', loadNextQuizQuestion);
     backToMenuQuizBtn.addEventListener('click', goToMainMenu);
     backToMenuGameBtn.addEventListener('click', goToMainMenu);
-
+    
     // Vérification explicite pour le bouton du mode traduire
     if (backToMenuTranslateBtn) {
         backToMenuTranslateBtn.addEventListener('click', goToMainMenu);
     } else {
         console.warn("Le bouton 'backToMenuTranslate' n'a pas été trouvé!");
     }
-
+    
     playAgainBtn.addEventListener('click', goToMainMenu);
     themeToggle.addEventListener('click', toggleDarkMode);
-    gameDifficultySelect.addEventListener('change', function () {
+    gameDifficultySelect.addEventListener('change', function() {
         // Relancer le mode ludique quand on change de difficulté
         if (gameMode.classList.contains('hidden') === false) {
             loadGameQuestion();
@@ -434,51 +434,51 @@ function loadGameQuestion() {
 
 // Generate game options
 function generateGameOptions(askForPreterit) {
-    // Always ask for preterit (participle passé masqué)
-    askForPreterit = true;
+// Always ask for preterit (participle passé masqué)
+askForPreterit = true;
 
-    // Get correct answer
-    const correctAnswer = currentGameVerb.preterit;
+// Get correct answer
+const correctAnswer = currentGameVerb.preterit;
 
-    // Split if there are multiple correct forms
-    const correctOptions = correctAnswer.includes('/') ? correctAnswer.split('/') : [correctAnswer];
+// Split if there are multiple correct forms
+const correctOptions = correctAnswer.includes('/') ? correctAnswer.split('/') : [correctAnswer];
 
-    // Get the first correct option
-    const mainCorrectOption = correctOptions[0].trim();
+// Get the first correct option
+const mainCorrectOption = correctOptions[0].trim();
 
-    // Vérifier le mode de difficulté
-    const difficultyMode = gameDifficultySelect.value;
+// Vérifier le mode de difficulté
+const difficultyMode = gameDifficultySelect.value;
 
-    if (difficultyMode === 'easy') {
-        // Mode facile : comme actuellement
-        // Create a pool of wrong answers
-        const wrongAnswers = verbs
-            .filter(verb => verb !== currentGameVerb)
-            .map(verb => verb.preterit)
-            .filter(ans => !ans.includes(mainCorrectOption)); // Make sure wrong answers don't contain the correct one
+if (difficultyMode === 'easy') {
+// Mode facile : comme actuellement
+    // Create a pool of wrong answers
+    const wrongAnswers = verbs
+        .filter(verb => verb !== currentGameVerb)
+        .map(verb => verb.preterit)
+        .filter(ans => !ans.includes(mainCorrectOption)); // Make sure wrong answers don't contain the correct one
+    
+    // Shuffle and pick 3 wrong answers
+    const shuffledWrong = wrongAnswers.sort(() => 0.5 - Math.random()).slice(0, 3);
+    
+    // Combine with correct answer and shuffle
+currentGameOptions = [...correctOptions.map(opt => opt.trim()), ...shuffledWrong];
+currentGameOptions = [...new Set(currentGameOptions)]; // Remove duplicates
+currentGameOptions = currentGameOptions.slice(0, 4); // Limit to 4 options
 
-        // Shuffle and pick 3 wrong answers
-        const shuffledWrong = wrongAnswers.sort(() => 0.5 - Math.random()).slice(0, 3);
+if (currentGameOptions.length < 4) {
+        // Add more wrong answers if needed
+        const moreWrong = wrongAnswers
+            .filter(ans => !currentGameOptions.includes(ans))
+            .slice(0, 4 - currentGameOptions.length);
+        currentGameOptions = [...currentGameOptions, ...moreWrong];
+    }
+} else {
+// Mode normal : générer des variations proches de la bonne réponse
+const variations = generatePretermVariations(correctAnswer);
 
-        // Combine with correct answer and shuffle
-        currentGameOptions = [...correctOptions.map(opt => opt.trim()), ...shuffledWrong];
-        currentGameOptions = [...new Set(currentGameOptions)]; // Remove duplicates
-        currentGameOptions = currentGameOptions.slice(0, 4); // Limit to 4 options
-
-        if (currentGameOptions.length < 4) {
-            // Add more wrong answers if needed
-            const moreWrong = wrongAnswers
-                .filter(ans => !currentGameOptions.includes(ans))
-                .slice(0, 4 - currentGameOptions.length);
-            currentGameOptions = [...currentGameOptions, ...moreWrong];
-        }
-    } else {
-        // Mode normal : générer des variations proches de la bonne réponse
-        const variations = generatePretermVariations(correctAnswer);
-
-        // Combiner avec la bonne réponse et mélanger
-        currentGameOptions = [mainCorrectOption, ...variations];
-
+// Combiner avec la bonne réponse et mélanger
+currentGameOptions = [mainCorrectOption, ...variations];
+    
         // S'assurer qu'on a bien 4 options
         if (currentGameOptions.length < 4) {
             // En pratique, on doit toujours avoir 4 options avec notre fonction generatePretermVariations
@@ -487,18 +487,18 @@ function generateGameOptions(askForPreterit) {
                 .filter(verb => verb !== currentGameVerb)
                 .map(verb => verb.preterit)
                 .filter(ans => !ans.includes(mainCorrectOption));
-
+            
             const additionalOptions = otherVerbs
                 .sort(() => 0.5 - Math.random())
                 .slice(0, 4 - currentGameOptions.length);
-
+                
             currentGameOptions = [...currentGameOptions, ...additionalOptions];
         }
     }
-
+    
     // Shuffle options
     currentGameOptions.sort(() => 0.5 - Math.random());
-
+    
     // Create option buttons
     currentGameOptions.forEach(option => {
         const button = document.createElement('button');
@@ -640,13 +640,13 @@ function showGameResults() {
 function startTranslateMode() {
     welcomeScreen.classList.add('hidden');
     translateMode.classList.remove('hidden');
-
+    
     // S'assurer que le bouton de retour au menu fonctionne
     const backBtn = document.getElementById('backToMenuTranslate');
     if (backBtn) {
         backBtn.onclick = goToMainMenu;
     }
-
+    
     loadTranslateQuestion();
 }
 
@@ -890,7 +890,7 @@ function createConfetti() {
 }
 
 // Initialize application when DOM is loaded
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
     // Wait for DOM to be fully loaded before initializing
     setTimeout(init, 100);
 });
