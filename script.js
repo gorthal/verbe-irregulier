@@ -47,6 +47,7 @@ let timeRemaining = 15;
 let currentGameVerb = null;
 let currentGameOptions = [];
 let isDarkMode = false;
+let recentlyUsedVerbs = [];
 
 // Initialize the application
 async function init() {
@@ -149,8 +150,24 @@ function loadQuizQuestion() {
     feedback.classList.add('hidden');
     nextQuestionBtn.classList.add('hidden');
     
-    // Randomly select a verb
-    const randomVerb = verbs[Math.floor(Math.random() * verbs.length)];
+    // Randomly select a verb, avoiding recently used ones
+    let availableVerbs = verbs.filter(verb => !recentlyUsedVerbs.includes(verb.infinitive));
+    
+    // If all verbs have been used recently, reset the tracker
+    if (availableVerbs.length === 0) {
+        recentlyUsedVerbs = [];
+        availableVerbs = verbs;
+    }
+    
+    const randomVerb = availableVerbs[Math.floor(Math.random() * availableVerbs.length)];
+    
+    // Add to recently used list
+    recentlyUsedVerbs.push(randomVerb.infinitive);
+    
+    // Keep the list to a reasonable size
+    if (recentlyUsedVerbs.length > Math.min(10, verbs.length / 2)) {
+        recentlyUsedVerbs.shift(); // Remove oldest verb
+    }
     
     // Display verb information
     infinitiveEl.textContent = randomVerb.infinitive;
@@ -289,9 +306,13 @@ function loadGameQuestion() {
     // Create answer options
     generateGameOptions(askForPreterit);
     
+    // Clear previous questions
+    const oldQuestions = document.querySelectorAll('.question-prompt');
+    oldQuestions.forEach(el => el.remove());
+    
     // Add question to game card
     const questionEl = document.createElement('div');
-    questionEl.className = 'text-blue-600 dark:text-blue-400 font-semibold mt-2';
+    questionEl.className = 'text-blue-600 dark:text-blue-400 font-semibold mt-2 question-prompt';
     questionEl.textContent = `Quel est le ${questionType} ?`;
     gameVerb.parentNode.appendChild(questionEl);
     
