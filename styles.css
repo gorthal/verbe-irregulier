@@ -1,0 +1,100 @@
+/* Custom Styles */
+body {
+    background-color: #f8fafc;
+    color: #1e293b;
+}
+
+body.dark {
+    background-color: #0f172a;
+    color: #e2e8f0;
+}
+
+.bounce {
+    animation: bounce 0.5s;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.shake {
+    animation: shake 0.5s;
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-5px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(5px);
+    }
+}
+
+.highlight {
+    background-color: #fef3c7;
+    transition: background-color 0.3s;
+}
+
+body.dark .highlight {
+    background-color: #78350f;
+}
+
+.correct {
+    border-color: #10b981 !important;
+    background-color: rgba(16, 185, 129, 0.1);
+}
+
+.incorrect {
+    border-color: #ef4444 !important;
+    background-color: rgba(239, 68, 68, 0.1);
+}
+
+.option {
+    transition: all 0.2s;
+}
+
+.option:hover {
+    transform: translateY(-2px);
+}
+
+.option-correct {
+    background-color: #10b981 !important;
+    color: white !important;
+}
+
+.option-incorrect {
+    background-color: #ef4444 !important;
+    color: white !important;
+}
+
+/* Confetti animation for celebrations */
+.confetti {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background-color: #f00;
+    opacity: 0;
+    transform: translateY(0) rotate(0);
+    pointer-events: none;
+    z-index: 999;
+    animation: confetti-fall 3s ease-in-out forwards;
+}
+
+@keyframes confetti-fall {
+    0% {
+        opacity: 1;
+        transform: translateY(-100vh) rotate(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(100vh) rotate(720deg);
+    }
+}

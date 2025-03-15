@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verbes Irréguliers Anglais</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-sans transition-colors duration-200">
+    <div class="container mx-auto px-4 py-8 max-w-3xl">
+        <!-- Header -->
+        <header class="mb-8">
+            <div class="flex justify-between items-center">
+                <h1 class="text-3xl font-bold text-blue-600 dark:text-blue-400">Verbes Irréguliers Anglais</h1>
+                <button id="themeToggle" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700">
+                    <svg id="sunIcon" class="w-6 h-6 text-yellow-500 hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"/></svg>
+                    <svg id="moonIcon" class="w-6 h-6 text-gray-900 dark:text-gray-100" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                </button>
+            </div>
+        </header>
+
+        <!-- Welcome Screen -->
+        <div id="welcomeScreen" class="text-center py-10">
+            <h2 class="text-2xl font-semibold mb-6 dark:text-white">Choisis ton mode de jeu</h2>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <button id="quizModeBtn" class="bg-blue-500 hover:bg-blue-600 text-white font-medium py-3 px-6 rounded-lg transition shadow-md">
+                    Mode Quiz
+                </button>
+                <button id="gameModeBtn" class="bg-purple-500 hover:bg-purple-600 text-white font-medium py-3 px-6 rounded-lg transition shadow-md">
+                    Mode Ludique
+                </button>
+            </div>
+        </div>
+
+        <!-- Quiz Mode -->
+        <div id="quizMode" class="hidden">
+            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 mb-6">
+                <div class="mb-4 flex justify-between items-center">
+                    <div>
+                        <span class="text-sm font-medium text-gray-500 dark:text-gray-400">Question</span>
+                        <div class="flex items-center">
+                            <span id="currentQuestion" class="text-lg font-semibold mr-1 dark:text-white">1</span>
+                            <span class="text-lg text-gray-500 dark:text-gray-400">/</span>
+                            <span id="totalQuestions" class="text-lg text-gray-500 dark:text-gray-400">10</span>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="text-sm font-medium text-gray-500 dark:text-gray-400">Score</span>
+                        <div class="text-lg font-semibold dark:text-white"><span id="score">0</span> points</div>
+                    </div>
+                </div>
+
+                <div class="mb-6">
+                    <div class="flex items-center mb-3">
+                        <div class="w-24 sm:w-32 text-sm font-medium text-gray-600 dark:text-gray-300">Infinitif:</div>
+                        <div id="infinitive" class="text-lg font-semibold dark:text-white"></div>
+                    </div>
+                    <div class="flex items-center mb-1">
+                        <div class="w-24 sm:w-32 text-sm font-medium text-gray-600 dark:text-gray-300">Traduction:</div>
+                        <div id="translation" class="text-lg italic text-gray-600 dark:text-gray-300"></div>
+                    </div>
+                </div>
+
+                <form id="quizForm" class="space-y-4">
+                    <div>
+                        <label for="preterit" class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-1">Prétérit:</label>
+                        <input type="text" id="preterit" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white">
+                    </div>
+
+                    <div>
+                        <label for="participle" class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-1">Participe passé:</label>
+                        <input type="text" id="participle" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white">
+                    </div>
+
+                    <div class="pt-2">
+                        <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-md transition">
+                            Vérifier
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <div id="feedback" class="bg-green-100 dark:bg-green-800 p-4 rounded-md mb-6 hidden">
+                <div id="feedbackText" class="text-green-800 dark:text-green-100 font-medium"></div>
+            </div>
+
+            <div class="flex justify-between">
+                <button id="backToMenuQuiz" class="text-blue-500 hover:text-blue-600 font-medium">
+                    Retour au menu
+                </button>
+                <button id="nextQuestion" class="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-md transition hidden">
+                    Question suivante
+                </button>
+            </div>
+        </div>
+
+        <!-- Game Mode -->
+        <div id="gameMode" class="hidden">
+            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 mb-6">
+                <div class="mb-4 flex justify-between items-center">
+                    <div>
+                        <span class="text-sm font-medium text-gray-500 dark:text-gray-400">Niveau</span>
+                        <div id="gameLevel" class="text-lg font-semibold dark:text-white">1</div>
+                    </div>
+                    <div>
+                        <span class="text-sm font-medium text-gray-500 dark:text-gray-400">Score</span>
+                        <div class="text-lg font-semibold dark:text-white"><span id="gameScore">0</span> points</div>
+                    </div>
+                </div>
+
+                <div id="gameCard" class="bg-gray-100 dark:bg-gray-700 rounded-lg p-4 mb-4 text-center">
+                    <div id="gameVerb" class="text-xl font-bold mb-2 dark:text-white"></div>
+                    <div id="gameTranslation" class="text-gray-600 dark:text-gray-300 italic mb-4"></div>
+                </div>
+
+                <div id="answerOptions" class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <!-- Answer options will be inserted here -->
+                </div>
+            </div>
+
+            <div id="gameFeedback" class="bg-green-100 dark:bg-green-800 p-4 rounded-md mb-6 hidden">
+                <div id="gameFeedbackText" class="text-green-800 dark:text-green-100 font-medium"></div>
+            </div>
+
+            <div class="flex justify-between">
+                <button id="backToMenuGame" class="text-blue-500 hover:text-blue-600 font-medium">
+                    Retour au menu
+                </button>
+                <div class="flex space-x-2">
+                    <span id="timeLeft" class="font-medium dark:text-white"></span>
+                    <div id="progress" class="w-16 h-6 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                        <div id="progressBar" class="h-full bg-blue-500 transition-all duration-1000" style="width: 100%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results Screen -->
+        <div id="resultsScreen" class="hidden text-center py-8">
+            <h2 class="text-2xl font-semibold mb-4 dark:text-white">Résultats</h2>
+            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 mb-6">
+                <div class="text-4xl font-bold text-blue-500 mb-2"><span id="finalScore">0</span></div>
+                <div class="text-lg text-gray-600 dark:text-gray-300 mb-4">Points obtenus</div>
+                <div id="accuracyRate" class="text-lg font-medium mb-6 dark:text-white"></div>
+                <div id="encouragement" class="text-gray-700 dark:text-gray-300 italic"></div>
+            </div>
+            <button id="playAgain" class="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-6 rounded-lg transition mt-4">
+                Rejouer
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
